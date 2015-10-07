@@ -1,0 +1,5 @@
+[vagrant]
+testserver ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/default/virtualbox/private_key
+
+[ramnode]
+plushberry ansible_ssh_host=168.235.78.44 ansible_ssh_private_key_file=/home/justin/.ssh/id_rsa ansible_ssh_user=root
