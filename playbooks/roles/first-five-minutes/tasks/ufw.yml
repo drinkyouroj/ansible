@@ -1,0 +1,13 @@
+---
+# file: ufw.yml
+- name: ufw | install ufw
+  sudo: yes
+  apt: pkg=ufw state=installed
+
+- name: ufw | allow openssh
+  sudo: yes
+  ufw: rule=allow name=OpenSSH
+
+- name: ufw | enabled ufw on startup with deny policy
+  sudo: yes
+  ufw: state=enabled policy=deny

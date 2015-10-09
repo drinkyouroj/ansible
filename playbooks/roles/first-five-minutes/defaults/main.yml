@@ -1,0 +1,27 @@
+---
+# defaults file for role-first_five_minutes/
+
+# TimeZone
+# Universal / GMT / Zulu
+ffm_timzone: 'America/Los_Angeles'
+
+# upgrade policy: no, safe, full, dist
+ffm_upgrade: dist
+
+# defaults for postfix.yml
+
+# type of postfix configuration
+# valid options for ffm_postfix_mode are 'internet' or 'smarthost'
+# default='smarthost'
+ffm_postfix_mode: 'smarthost'
+# fqdn hostname
+ffm_fqdn_hostname : server.unroots.net
+# postfix smarthost only needed if ffm_postfix_mode equals 'smarthost'
+ffm_fqdn_smtp_relay : relay.acme.tld
+
+# defaults for logwatch.yml
+ffm_logwatch_email: monitor@unroots.net
+
+#default for notify login
+ffm_notify_login: no
+ffm_notify_login_email: monitor@unroots.net
