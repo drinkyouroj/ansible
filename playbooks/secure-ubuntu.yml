@@ -1,0 +1,10 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Secure a fresh Ubuntu Trusty server
+  hosts: ubuntu-trusty
+  sudo: True
+  vars_files:
+    - roles/first-five-minutes/vars/secrets.yml
+
+  roles:
+    - first-five-minutes
