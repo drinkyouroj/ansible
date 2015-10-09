@@ -1,0 +1,17 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: group hosts by distribution
+  hosts: all
+  gather_facts: True
+  tasks:
+    - name: create groups based on distro
+      group_by: key={{ ansible_distribution }}_{{ ansible_distribution_release }}
+
+- name: Secure fresh Ubuntu Trusty servers
+  hosts: Ubuntu_trusty
+  sudo: True
+  vars_files:
+    - roles/first-five-minutes/vars/secrets.yml
+
+  roles:
+    - first-five-minutes

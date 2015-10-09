@@ -7,5 +7,3 @@ vagrant1
 vagrant2
 vagrant3
 
-[ubuntu-trusty]
-vagrant[1:3]
